@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TestController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +17,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/test', [TestController::class,'index'])->name('text');
+
+Route::get('/11', function ($id) {
+    return '11';
+});
+
 
 Route::middleware([
     'auth:sanctum',
