@@ -14,17 +14,6 @@ use App\Http\Controllers\TestController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/test', [TestController::class,'index'])->name('text');
-
-Route::get('/11', function ($id) {
-    return '11';
-});
-
-
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
@@ -34,3 +23,14 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+
+Route::get('/', function () {
+    return view('welcome');
+});
+
+Route::get('/test', [TestController::class,'index'])->name('text');
+
+
+
+
