@@ -1,0 +1,60 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <!--LOGO-->
+    <a class="navbar-brand" href="#">SOKA</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!--導覽標籤-->
+    <div class="collapse navbar-collapse " id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">積分版 <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item dropdown">
+            <div class="d-block d-lg-none">
+                <a class="nav-link dropdown-toggle" data-toggle="collapse" href="#collapseTeamCall" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    小隊隊呼
+                </a>
+                <div class="collapse px-1 " id="collapseTeamCall">
+                    <div class=" p-2 border-bottom">
+                        <a class="list-group-item-action stretched-link" href="#">超級瑪利歐</a>
+                    </div>
+                    <div class=" p-2 border-bottom">
+                        <a class="list-group-item-action stretched-link" href="#">咒術迴戰 領域展開</a>
+                    </div>
+                    <div class=" p-2 border-bottom">
+                        <a class="list-group-item-action stretched-link" href="#">無所畏懼小小兵</a>
+                    </div>
+                    <div class=" p-2">
+                        <a class="list-group-item-action stretched-link" href="#">名偵探柯南</a>
+                    </div>
+                </div>
+            </div>
+            <div class="d-none d-lg-block">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarTeamCall" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    小隊隊呼
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarTeamCall">
+                    <a class="dropdown-item" href="#">超級瑪利歐</a>
+                    <a class="dropdown-item" href="#">咒術迴戰 領域展開</a>
+                    <a class="dropdown-item" href="#">無所畏懼小小兵</a>
+                    <a class="dropdown-item" href="#">名偵探柯南</a>
+
+                </div>
+            </div>
+          
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">美好時刻</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">回饋表單</a>
+        </li>
+      </ul>
+      <!--登入-->
+      <!--辨識是否為登入狀態顯示不同按鈕-->
+      <form class="form-inline my-2 my-lg-0">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">登入</button>
+      </form>
+    </div>
+  </nav>

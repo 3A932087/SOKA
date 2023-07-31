@@ -34,15 +34,15 @@ Route::middleware([
 Route::get('/', [HomeController::class, 'index'])->name('user.index');
 
 //積分版
-Route::prefix('fraction')->->name('fraction.')group(function () {
+Route::prefix('fraction')->name('fraction.')->group(function () {
     Route::get('/', [FractionController::class, 'index'])->name('index');//顯示積分版
     Route::get('/{team}/edit', [FractionController::class, 'edit'])->name('edit');//顯示分數編輯頁面(活動部&admin)
     Route::patch('/{team}', [FractionController::class, 'index'])->name('update');//更新分數
 });
 
 //隊呼
-Route::prefix('teamcall')->->name('teamcall.')->group(function () {
-    Route::get('/', [|TeamCallController::class, 'index'])->name('index');//查看小隊呼
+Route::prefix('teamcall')->name('teamcall.')->group(function () {
+    Route::get('/', [TeamCallController::class, 'index'])->name('index');//查看小隊呼
     Route::get('/{team}/edit', [TeamCallController::class, 'edit'])->name('edit');//顯示編輯畫面(熱力部)
     Route::patch('/{team}', [TeamCallController::class, 'update'])->name('update');//更新小隊呼
 });
