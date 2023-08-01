@@ -42,7 +42,7 @@
 
                 </div>
             </div>
-          
+
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">美好時刻</a>
@@ -53,8 +53,22 @@
       </ul>
       <!--登入-->
       <!--辨識是否為登入狀態顯示不同按鈕-->
-      <form class="form-inline my-2 my-lg-0">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">登入</button>
-      </form>
+          @if (Route::has('login'))
+              <div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right z-10">
+                  @auth
+                      <a class="btn btn-outline-info" href="{{ route('logout') }}"
+                         onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                          {{ __('登出') }}
+                      </a>
+
+                      <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                          @csrf
+                      </form>
+                  @else
+                      <a href="{{ route('login') }}" class="btn btn-outline-info">Log in</a>
+                  @endauth
+              </div>
+          @endif
     </div>
   </nav>

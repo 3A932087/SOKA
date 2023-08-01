@@ -26,12 +26,12 @@ Route::middleware([
     'verified'
 ])->group(function () {
     Route::get('/dashboard', function () {
-        return view('dashboard');
+        return request()->route('index');
     })->name('dashboard');
 });
 
 //首頁
-Route::get('/', [HomeController::class, 'index'])->name('user.index');
+Route::get('/', [HomeController::class, 'index'])->name('index');
 
 //積分版
 Route::prefix('fraction')->name('fraction.')->group(function () {
@@ -69,7 +69,7 @@ Route::prefix('admin')->name('admin')->group(function () {
         Route::patch('/{team}', [AdminTeamController::class, 'update'])->name('update');//更新小隊資料
         Route::delete('/{team}', [AdminTeamController::class, 'destory'])->name('destory');//刪除小隊
     });
-    
+
     //連結管理
     Route::prefix('link')->name('link')->group(function () {
         Route::get('/', [AdminLinkController::class, 'index'])->name('index');//連結列表
