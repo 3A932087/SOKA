@@ -17,9 +17,11 @@
                 </a>
                 <div class="collapse px-1 " id="collapseTeamCall">
                     @foreach ($teams as $team)
-                        <div class=" p-2 border-bottom">
-                            <a class="list-group-item-action stretched-link" href="{{route('teamcall.index',$team->id)}}">{{$team->name}}</a>
+                    <a class="list-group-item-action stretched-link" href="{{route('teamcall.index',$team->id)}}">
+                        <div class=" p-2 nav-link border-bottom ">
+                            {{$team->name}}
                         </div>
+                    </a>
                     @endforeach
                     
                 </div>
@@ -29,11 +31,9 @@
                     小隊隊呼
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarTeamCall">
-                    <a class="dropdown-item" href="#">超級瑪利歐</a>
-                    <a class="dropdown-item" href="#">咒術迴戰 領域展開</a>
-                    <a class="dropdown-item" href="#">無所畏懼小小兵</a>
-                    <a class="dropdown-item" href="#">名偵探柯南</a>
-
+                    @foreach ($teams as $team)
+                        <a class="dropdown-item" href="{{route('teamcall.index',$team->id)}}">{{$team->name}}</a>
+                    @endforeach
                 </div>
             </div>
 
