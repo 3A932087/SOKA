@@ -17,7 +17,7 @@ class AdminTeamController extends Controller
     public function store(Request $request){
         Team::create([
             'name'=>$request->name,
-            'team_call'=>nl2br($request->teamcall),
+            'team_call'=>nl2br($request->teamcall,false),
         ]);
         return redirect()->route('admin.team.index');
     }
@@ -25,7 +25,7 @@ class AdminTeamController extends Controller
         $team=Team::find($request->id);
         $team->update([
             'name'=>$request->name,
-            'team_call'=>$request->teamcall,
+            'team_call'=>nl2br($request->teamcall,false),
         ]);
         return redirect()->route('admin.team.index');
     }

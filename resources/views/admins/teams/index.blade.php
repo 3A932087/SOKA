@@ -1,5 +1,5 @@
 @extends('admins.layouts.master')
-@section('title','帳號列表')
+@section('title','小隊列表')
 @section('content')
 <main class="container">
     <header class="py-5">
