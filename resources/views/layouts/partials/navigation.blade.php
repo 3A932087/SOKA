@@ -56,6 +56,7 @@
           @if (Route::has('login'))
               <div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right z-10">
                   @auth
+                    <span>Hi,{{Auth::user()->name}}</span>
                       <a class="btn btn-outline-info" href="{{ route('logout') }}"
                          onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">

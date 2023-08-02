@@ -13,5 +13,7 @@ class Fraction extends Model
         'team_id',
         'user_id',
         'fraction',
+        ''
     ];
+    public $timestamps = false;//不用儲存建立時間及修改時間
 }
