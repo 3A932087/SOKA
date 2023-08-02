@@ -14,4 +14,14 @@ class TeamCallController extends Controller
         ];
         return view('teams.index',$data);
     }
+    public function show(Team $team) {
+        $teams=Team::all();
+        $data=[
+            'teams'=>$teams,
+            'team'=>$team,
+        ];
+        
+        return view('teams.show',$data);
+        return redirect()->route('team.index');
+        }
 }
