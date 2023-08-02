@@ -26,14 +26,14 @@ Route::middleware([
     'verified'
 ])->group(function () {
     Route::get('/dashboard', function () {
-        return request()->route('index');
-        if(Auth::user()->type==0){
+        if(Auth::user()->type=='0'){
             //admin
-            return request()->route('admin');
+            return redirect()->route('admin.index');
         }else{
             //user
-            return request()->route('index');
+            return redirect()->route('index');
         }
+
     })->name('dashboard');
 });
 

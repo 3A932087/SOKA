@@ -91,7 +91,7 @@
                           </div>
                         <div class="form-group">
                             <label for="email">小隊隊呼</label>
-                            <textarea class="form-control" id="editteamcall" name="teamcall" placeholder="輸入隊呼"></textarea>
+                            <textarea class="form-control" id="editteamcall" name="teamcall"></textarea>
                         </div>
                     </div>
                     <div class="modal-footer">
