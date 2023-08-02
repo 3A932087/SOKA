@@ -22,6 +22,14 @@ class TeamCallController extends Controller
         ];
         
         return view('teams.show',$data);
-        return redirect()->route('team.index');
+        }
+    
+        public function update(Request $request, $id){
+            $team=Team::find($request->id);
+            $team->update([
+                'name'=>$request->name,
+                'team_call'=>nl2br($request->teamcall,false),
+            ]);
+            return redirect()->route('teamcall.show',$request->id);
         }
 }
