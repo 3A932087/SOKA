@@ -49,7 +49,8 @@ Route::prefix('fraction')->name('fraction.')->group(function () {
 
 //隊呼
 Route::prefix('teamcall')->name('teamcall.')->group(function () {
-    Route::get('/{team}', [TeamCallController::class, 'index'])->name('index');//查看某一小隊呼
+    Route::get('/', [TeamCallController::class, 'index'])->name('index');//查看小隊
+    Route::get('/{team}', [TeamCallController::class, 'show'])->name('show');//查看某一小隊呼
     Route::get('/{team}/edit', [TeamCallController::class, 'edit'])->middleware('auth')->name('edit');//顯示編輯畫面(熱力部)
     Route::patch('/{team}', [TeamCallController::class, 'update'])->name('update');//更新小隊呼
 });

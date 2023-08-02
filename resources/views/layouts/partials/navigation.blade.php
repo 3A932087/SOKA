@@ -17,7 +17,7 @@
                 </a>
                 <div class="collapse px-1 " id="collapseTeamCall">
                     @foreach ($teams as $team)
-                    <a class="list-group-item-action stretched-link" href="{{route('teamcall.index',$team->id)}}">
+                    <a class="list-group-item-action stretched-link" href="{{route('teamcall.show',$team->id)}}">
                         <div class=" p-2 nav-link border-bottom ">
                             {{$team->name}}
                         </div>
@@ -32,7 +32,7 @@
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarTeamCall">
                     @foreach ($teams as $team)
-                        <a class="dropdown-item" href="{{route('teamcall.index',$team->id)}}">{{$team->name}}</a>
+                        <a class="dropdown-item" href="{{route('teamcall.show',$team->id)}}">{{$team->name}}</a>
                     @endforeach
                 </div>
             </div>
