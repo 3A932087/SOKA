@@ -9,16 +9,13 @@
         </div>
     </div>
 </header>
-<main>
-    <div class=" container text-center">
+<main class="h-100">
+    <div class=" container text-center ">
         <div class="row">
-
                 <div class=" pb-3 col-12">
-                <a href="{{route('teamcall.show',$team->id)}}" class="text-decoration-none">
-                    <div class="px-5 py-2 text-nowrap bg-secondary rounded text-white d-flex align-items-center justify-content-center" style="font-size: 4vmin;">
+                    <div class="px-5 py-2 text-nowrap border border-secondary rounded d-flex align-items-stretch justify-content-center" style="font-size: 4vmin;height:200px;">
                         {!!$team->team_call!!}
                     </div>
-                </a>
                 </div>
 
             
