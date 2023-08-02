@@ -10,13 +10,17 @@
     </div>
 </header>
 <main class="h-100 container ">
-    @if (Auth::user()->type == '1')
-    <div class="d-flex justify-content-end pb-2">
-        <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#editTeam" data-id={{$team->id}} data-name={{$team->name}} data-teamcall="{!! $team->team_call !!}">
-            編輯
-      </button>
-    </div>
+    @if (Auth::user()!=null)
+        @if (Auth::user()->type == '1')
+        <div class="d-flex justify-content-end pb-2">
+            <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#editTeam" data-id={{$team->id}} data-name={{$team->name}} data-teamcall="{!! $team->team_call !!}">
+                編輯
+        </button>
+        </div>
+        @endif
     @endif
+        
+    
    
     <div class="text-center ">
         <div class="row">
