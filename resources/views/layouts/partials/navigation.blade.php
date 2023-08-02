@@ -16,18 +16,12 @@
                     小隊隊呼
                 </a>
                 <div class="collapse px-1 " id="collapseTeamCall">
-                    <div class=" p-2 border-bottom">
-                        <a class="list-group-item-action stretched-link" href="#">超級瑪利歐</a>
-                    </div>
-                    <div class=" p-2 border-bottom">
-                        <a class="list-group-item-action stretched-link" href="#">咒術迴戰 領域展開</a>
-                    </div>
-                    <div class=" p-2 border-bottom">
-                        <a class="list-group-item-action stretched-link" href="#">無所畏懼小小兵</a>
-                    </div>
-                    <div class=" p-2">
-                        <a class="list-group-item-action stretched-link" href="#">名偵探柯南</a>
-                    </div>
+                    @foreach ($teams as $team)
+                        <div class=" p-2 border-bottom">
+                            <a class="list-group-item-action stretched-link" href="{{route('teamcall.index',$team->id)}}">{{$team->name}}</a>
+                        </div>
+                    @endforeach
+                    
                 </div>
             </div>
             <div class="d-none d-lg-block">
