@@ -9,12 +9,12 @@
         </div>
     </div>
 </header>
-<main>
-    <table class="table">
+<main class="container">
+    <table class="table text-center  table-striped">
         <thead>
             <tr>
-                <th>名稱</th>
-                <th>分數</th>
+                <th scope="col" style="width: 50%">名稱</th>
+                <th scope="col">分數</th>
             </tr>
         </thead>
         <tbody>
