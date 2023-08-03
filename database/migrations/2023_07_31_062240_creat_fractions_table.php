@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('fraction', function (Blueprint $table) {
+        Schema::create('fractions', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');    //使用者編號
             $table->foreign('user_id')->references('id')->on('users');
@@ -26,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('fraction');
+        Schema::dropIfExists('fractions');
     }
 };

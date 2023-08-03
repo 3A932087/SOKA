@@ -15,19 +15,19 @@ class TeamSeed extends Seeder
         Team::truncate();//重制資料表
         Team::factory([
             'name' => '超級瑪莉歐',
-            "team_call"=>'test'
+            "team_call"=>'test',
         ])->create();
         Team::factory([
             'name' => '咒術迴戰 領域展開',
-            "team_call"=>'test'
+            "team_call"=>'test',
         ])->create();
         Team::factory([
             'name' => '無所畏懼小小兵',
-            "team_call"=>'test'
+            "team_call"=>'test',
         ])->create();
         Team::factory([
             'name' => '名偵探柯南',
-            "team_call"=>'test'
+            "team_call"=>'test',
         ])->create();
     }
 }
