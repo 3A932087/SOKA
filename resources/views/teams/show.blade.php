@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('title','首頁')
+@section('title','小隊隊呼')
 @section('content')
 <header>
     <div class="container pt-4 text-center">
