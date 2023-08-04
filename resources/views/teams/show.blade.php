@@ -65,8 +65,11 @@
         </div>
     </div>
 </main>
+
+@endsection
+@section('script')
 <script>
-            $.(document).ready(function () {
+            $(document).ready(function () {
                 $("#editTeam").on("show.bs.modal", function (event) {
                 var button = $(event.relatedTarget);
                 var id = button.data("id");
@@ -77,7 +80,7 @@
                 modal.find("#edit #editteamcall").text(teamcall);
                 modal.find("#edit #id").val(id);
                 });
-            })
+            });
             
 </script>
 @endsection
