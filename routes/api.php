@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TestController;
+use App\Http\Controllers\FractionController;
 
 
 /*
@@ -21,3 +22,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('/test',[TestController::class,'api']);
+
+Route::get('/list',[FractionController::class,'list']);
+Route::get('/getdata',[FractionController::class,'getdata']);

@@ -4,6 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Team;
+use App\Models\User;
 
 class Fraction extends Model
 {
@@ -16,4 +18,8 @@ class Fraction extends Model
         ''
     ];
     public $timestamps = false;//不用儲存建立時間及修改時間
+    
+    public function team(){
+        return $this->belongsTo(Team::class);
+    }
 }

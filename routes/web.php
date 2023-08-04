@@ -44,7 +44,7 @@ Route::get('/', [HomeController::class, 'index'])->name('index');
 Route::prefix('fraction')->name('fraction.')->group(function () {
     Route::get('/', [FractionController::class, 'index'])->name('index');//顯示積分版
     Route::get('/{team}/edit', [FractionController::class, 'edit'])->middleware('auth')->name('edit');//顯示分數編輯頁面(活動部&admin)
-    Route::patch('/{team}', [FractionController::class, 'index'])->name('update');//更新分數
+    Route::patch('/{team}', [FractionController::class, 'update'])->name('update');//更新分數
 });
 
 //隊呼

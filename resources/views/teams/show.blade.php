@@ -10,7 +10,7 @@
     </div>
 </header>
 <main class="h-100 container ">
-    @if (Auth::user()!=null)
+    @Auth
         @if (Auth::user()->type == '1')
         <div class="d-flex justify-content-end pb-2">
             <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#editTeam" data-id={{$team->id}} data-name={{$team->name}} data-teamcall="{!! $team->team_call !!}">
@@ -18,7 +18,7 @@
         </button>
         </div>
         @endif
-    @endif
+    @endauth
         
     
    
@@ -29,10 +29,10 @@
                         {!! $team->team_call !!}
                     </div>
                 </div>
-
             
         </div>
     </div>
+    <!--Model-->
     <div class="modal fade" id="editTeam" tabindex="-1" role="dialog" aria-labelledby="editTeamLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
@@ -66,7 +66,7 @@
     </div>
 </main>
 <script>
-            $(document).ready(function () {
+            $.(document).ready(function () {
                 $("#editTeam").on("show.bs.modal", function (event) {
                 var button = $(event.relatedTarget);
                 var id = button.data("id");
