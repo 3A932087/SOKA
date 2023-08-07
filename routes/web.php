@@ -91,8 +91,8 @@ Route::prefix('admin')->name('admin.')->middleware('auth')->group(function () {
     //分數管理
     Route::prefix('fraction')->name('fraction.')->group(function () {
         Route::get('/', [AdminFractionController::class, 'index'])->name('index');//總分列表
-        Route::get('/{fraction}', [AdminTeamController::class, 'show'])->name('show');//查看某一小隊分數紀錄
-        Route::delete('/{fraction}', [AdminLinkController::class, 'destroy'])->name('destroy');//重置分數紀錄
+        Route::get('/{fraction}', [AdminFractionController::class, 'show'])->name('show');//查看某一小隊分數紀錄
+        Route::delete('/{fraction}', [AdminFractionController::class, 'destroy'])->name('destroy');//重置分數紀錄
 
     });
 });
