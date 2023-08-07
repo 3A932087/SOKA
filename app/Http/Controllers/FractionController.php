@@ -66,7 +66,7 @@ class FractionController extends Controller
         Fraction::create([
             'user_id'=>Auth::user()->id,
             'team_id'=>$request->id,
-            'fraction'=>$request->fraction,
+            'fraction'=>$request->edit_fraction,
         ]);
         return redirect()->route('fraction.index');
     }

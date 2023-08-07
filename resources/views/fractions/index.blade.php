@@ -1,6 +1,14 @@
 @extends('layouts.master')
 @section('title','積分版')
 @section('content')
+<style>
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    }
+
+</style>
 <header>
     <div class="container pt-4 text-center">
         <div class="jumbotron bg-info text-white">
@@ -57,9 +65,20 @@
                             @endforeach
                         </select>
                     </div>
+
                     <div class="form-group">
                         <label for="email">分數調整</label>
-                        <input type="number" class="form-control" id="fraction" name="fraction" step="100" value="100" required>
+                        <div class="input-group">
+                            <div class="input-group-prepend" id="button-addon2">
+                                <button class="btn btn-outline-secondary" type="button" id="reduce">-</button>
+                                
+                            </div>
+                            <input type="number" class="form-control" id="edit_fraction" name="edit_fraction" step="100" value="100" required aria-describedby="button-addon2">
+                            <div class="input-group-append" id="button-addon2">
+                                <button class="btn btn-outline-secondary" type="button" id="add">+</button>
+                            </div>
+                        </div>
+                        
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -93,7 +112,15 @@
             getdata();
 
             }
-        })
+        });
+        $('#add').click(function(){
+            var fraction = parseInt($('#edit_fraction').val());
+            $('#edit_fraction').val(fraction + 100);
+        });
+        $('#reduce').click(function(){
+            var fraction = parseInt($('#edit_fraction').val());
+            $('#edit_fraction').val(fraction - 100);
+        });
     });
     function getdata(){
         $.ajax({
