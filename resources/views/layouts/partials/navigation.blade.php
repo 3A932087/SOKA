@@ -39,10 +39,10 @@
 
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{$photo}}">美好時刻</a>
+          <a class="nav-link" href="{{$photo}}" target="target">美好時刻</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="{{$form}}">回饋表單</a>
+            <a class="nav-link" href="{{$form}}" target="target">回饋表單</a>
         </li>
       </ul>
       <!--登入-->
