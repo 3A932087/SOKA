@@ -25,7 +25,7 @@
                 <td>{{$link->id}}</td>
                 <td>{{$link->name}}</td>
                 <td>
-                    <a href="{{$link->url}}" class="btn btn-sm btn-outline-primary" target="_blank">測試</a>
+                    <a href="{{$link->URL}}" class="btn btn-sm btn-outline-primary" target="_blank">測試</a>
                 </td>
                 <td>
                     <button type="button" class="btn btn-outline-warning btn-sm" data-toggle="modal" data-target="#editLink" data-id="{{$link->id}}" data-name="{{$link->name}}" data-url="{{$link->URL}}">
