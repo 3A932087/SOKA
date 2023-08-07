@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Team;
+use App\Models\Link;
 use App\Models\Fraction;
 use App\Models\User;
 use Illuminate\Support\Arr;
@@ -14,8 +15,12 @@ class FractionController extends Controller
 {
     public function index(){
         $teams=Team::all();
+        $photo=Link::where('name','=','photo')->first()!=null?Link::where('name','=','photo')->first()->URL:'#';
+        $form=Link::where('name','=','form')->first()!=null?Link::where('name','=','form')->first()->URL:'#';
         $data=[
-            'teams'=>$teams
+            'teams'=>$teams,
+            'photo'=>$photo,
+            'form'=>$form
         ];
         return view('fractions.index',$data);
     }
