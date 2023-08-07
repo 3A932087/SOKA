@@ -235,7 +235,12 @@
             </div>
         </div>
     
-        <script>
+       
+</main>
+
+@endsection
+@section('script')
+     <script>
             $(document).ready(function () {
                 $("#editAccount").on("show.bs.modal", function (event) {
                 
@@ -259,6 +264,4 @@
             })
             
         </script>
-</main>
-
 @endsection
