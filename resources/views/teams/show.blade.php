@@ -26,7 +26,7 @@
         <div class="row">
                 <div class=" pb-3 col-12">
                     <div class="px-5 py-2 text-nowrap border border-secondary rounded d-flex align-items-stretch justify-content-center" style="font-size: 4vmin;height:200px;">
-                        {!! $team->team_call !!}
+                        {!! nl2br($team->team_call) !!}
                     </div>
                 </div>
             

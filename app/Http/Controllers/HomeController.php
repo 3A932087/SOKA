@@ -11,8 +11,8 @@ class HomeController extends Controller
     //首頁
     public function index(){
         $teams=Team::all();
-        $photo=Link::where('name','=','photo')->first()!=null?Link::where('name','=','photo')->first()->URL:'#';
-        $form=Link::where('name','=','form')->first()!=null?Link::where('name','=','form')->first()->URL:'#';
+        $photo=Link::where('name','=','photo')->first()->URL??'#';
+        $form=Link::where('name','=','form')->first()->URL??'#';
         $data=[
             'teams'=>$teams,
             'photo'=>$photo,

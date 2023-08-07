@@ -24,7 +24,7 @@
                 <td>{{$team->id}}</td>
                 <td>{{$team->name}}</td>
                 <td>
-                    <button type="button" class="btn btn-outline-warning btn-sm" data-toggle="modal" data-target="#editTeam" data-id={{$team->id}} data-name={{$team->name}} data-teamcall="{!! $team->team_call !!}">
+                    <button type="button" class="btn btn-outline-warning btn-sm" data-toggle="modal" data-target="#editTeam" data-id={{$team->id}} data-name={{$team->name}} data-teamcall="{{$team->team_call}}">
                         編輯
                     </button>
                     <form action="{{route('admin.team.destroy',$team->id)}}" method="post" class="d-inline">
