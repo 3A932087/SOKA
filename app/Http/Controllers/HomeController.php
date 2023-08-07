@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Team;
+use App\Models\Link;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -10,8 +11,12 @@ class HomeController extends Controller
     //首頁
     public function index(){
         $teams=Team::all();
+        $photo=Link::where('name','=','photo')->first()!=null?Link::where('name','=','photo')->first()->URL:'#';
+        $form=Link::where('name','=','form')->first()!=null?Link::where('name','=','form')->first()->URL:'#';
         $data=[
-            'teams'=>$teams
+            'teams'=>$teams,
+            'photo'=>$photo,
+            'form'=>$form
         ];
         return view('home',$data);
     }

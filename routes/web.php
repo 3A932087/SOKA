@@ -81,18 +81,17 @@ Route::prefix('admin')->name('admin.')->middleware('auth')->group(function () {
     //連結管理
     Route::prefix('link')->name('link.')->group(function () {
         Route::get('/', [AdminLinkController::class, 'index'])->name('index');//連結列表
-        Route::get('/create', [AdminLinkController::class, 'create'])->name('create');//新增畫面
         Route::post('/store', [AdminLinkController::class, 'store'])->name('store');//儲存連結資料
-        Route::get('/{link}/edit', [AdminLinkController::class, 'edit'])->name('edit');//編輯畫面
         Route::patch('/{link}', [AdminLinkController::class, 'update'])->name('update');//更新連結資料
-        Route::delete('/{link}', [AdminLinkController::class, 'destroy'])->name('destroy');//刪除連結
+        Route::delete('/{link}', [AdminLinkController::class, 'delete'])->name('destroy');//刪除連結
     });
 
     //分數管理
     Route::prefix('fraction')->name('fraction.')->group(function () {
         Route::get('/', [AdminFractionController::class, 'index'])->name('index');//總分列表
         Route::get('/{fraction}', [AdminFractionController::class, 'show'])->name('show');//查看某一小隊分數紀錄
-        Route::delete('/{fraction}', [AdminFractionController::class, 'destroy'])->name('destroy');//重置分數紀錄
+        Route::patch('/{fraction}/update', [AdminFractionController::class, 'update'])->name('update');//修改分數
+        Route::delete('/destory', [AdminFractionController::class, 'delete'])->name('destroy');//重置分數紀錄
 
     });
 });

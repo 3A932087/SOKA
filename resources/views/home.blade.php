@@ -30,14 +30,14 @@
                 </a>
             </div>
             <div class="pb-3 col-md-3 col-6">
-                <a href="#" class="text-decoration-none">
+                <a href="{{$photo}}" class="text-decoration-none">
                     <div class="p-5 text-nowrap bg-secondary rounded text-white d-flex align-items-center justify-content-center" style="font-size: 4vmin;">
                         美好時刻
                     </div>
                 </a>
             </div>
             <div class="pb-3 col-md-3 col-6">
-                <a href="#" class="text-decoration-none">
+                <a href="{{$form}}" class="text-decoration-none">
                     <div class="p-5 text-nowrap bg-secondary rounded text-white d-flex align-items-center justify-content-center" style="font-size: 4vmin;">
                         回饋問券
                     </div>
